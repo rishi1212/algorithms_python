@@ -1,0 +1,20 @@
+a=[0,1,1,2,0,0,0,1,2,2,2,2,1,1,1,0]
+lo=0
+hi=len(a)-1
+mid=0
+while(mid<=hi):
+    a1=a[mid]
+    if(a1==0):
+        temp=a[lo]
+        a[lo]=a[mid]
+        a[mid]=temp
+        mid+=1
+        lo+=1
+    elif(a1==1):
+        mid+=1
+    elif(a1==2):
+        temp=a[hi]
+        a[hi]=a[mid]
+        a[mid]=temp
+        hi-=1
+print (a)
