@@ -1,0 +1,22 @@
+a=[1,2,3,5]
+b=[4,6,7,8,9]
+len1=len(a)
+len2=len(b)
+final=[]
+i,j=0,0
+while(i<len1 and j<len2):
+    if(a[i]<b[j]):
+        final.append(a[i])
+        i+=1
+    elif(a[i]>b[j]):
+        final.append(b[j])
+        j+=1
+if(i==len1):
+    while(j<len2):
+        final.append(b[j])
+        j+=1
+else:
+    while(i<len1):
+        final.append(a[i])
+        i+=1
+print(final)
